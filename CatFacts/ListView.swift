@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ListView: View {
     @State private var catVM = CatViewModel()
+    @State private var sheetIsPresented = false
     
     var body: some View {
         NavigationStack {
@@ -41,6 +42,18 @@ struct ListView: View {
                             }
                         }
                     }
+                    
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button {
+                            sheetIsPresented.toggle()
+                        } label: {
+                            Text("🐈‍⬛")
+                            Image(systemName: "lightbulb.fill")
+                                
+                        }
+                        .buttonStyle(.bordered)
+
+                    }
                 }
                 
                 if catVM.isLoading {
@@ -48,6 +61,11 @@ struct ListView: View {
                         .scaleEffect(4)
                         .tint(.red)
                 }
+            }
+        }
+        .sheet(isPresented: $sheetIsPresented) {
+            NavigationStack {
+                FactView()
             }
         }
         .task {
