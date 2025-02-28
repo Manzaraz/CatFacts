@@ -13,6 +13,7 @@ class CatViewModel {
     struct Returned: Codable {
         var data: [CatBreed]
         var total: Int
+        var next_page_url: String? // might return null
     }
     
     var breeds = [CatBreed]()
@@ -40,12 +41,26 @@ class CatViewModel {
             }
             
             Task {@MainActor in
-                breeds = returned.data
+                urlString = returned.next_page_url ?? ""
+                breeds += returned.data // Make sure you add nuew page to existing page of breeds
                 total = returned.total
             }
             print("😎 Breeds returned! Total #: \(breeds.count)")
         } catch {
             print("😡SOMETHING WENT WRONG: Could not get data from urlString\n\(error.localizedDescription).")
+        }
+    }
+    
+    
+    func loadNextIfNeeded(catBreed: CatBreed) async {
+        guard let lastBred = breeds.last else { return } //Find last breed that has been loaded to our array
+        // Check if teh CatBreed passed in is the last breed loaded, if so, load another page if you can
+        if catBreed.id == lastBred.id && urlString != "" {
+            Task {
+                await getData()
+            }
+//        } else {
+            
         }
     }
 }

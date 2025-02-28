@@ -13,11 +13,16 @@ struct ListView: View {
     var body: some View {
         NavigationStack {
             List(catVM.breeds) { catBreed in
-                NavigationLink {
-                    DetailView(catBreed: catBreed)
-                } label: {
-                    Text(catBreed.breed)
-                        .font(.title2)
+                LazyVStack(alignment: .leading) {
+                    NavigationLink {
+                        DetailView(catBreed: catBreed)
+                    } label: {
+                        Text(catBreed.breed)
+                            .font(.title2)
+                    }
+                }
+                .task {
+                    await catVM.loadNextIfNeeded(catBreed: catBreed)
                 }
 
             }
