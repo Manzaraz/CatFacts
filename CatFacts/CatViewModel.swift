@@ -18,16 +18,18 @@ class CatViewModel {
     
     var breeds = [CatBreed]()
     var total = 0
-    
     var urlString = "https://catfact.ninja/breeds"
+    var isLoading = false
     
     
     func getData() async {
+        isLoading = true
         print("🕸️Accesing to the Web. url: \(urlString)")
         
         // Create URL
         guard let url = URL(string: urlString) else {
             print("😡URL ERROR: We couldn't convert the string to a valid URL, chefck the urlString.")
+            isLoading = false
             return
         }
         
@@ -37,6 +39,7 @@ class CatViewModel {
             // Try to decode JSON data into our own data structures
             guard let returned = try?JSONDecoder().decode(Returned.self, from: data) else {
                 print("😡JSON ERROR: Could not decode returned JSON data.")
+                isLoading = false
                 return
             }
             
@@ -44,10 +47,12 @@ class CatViewModel {
                 urlString = returned.next_page_url ?? ""
                 breeds += returned.data // Make sure you add nuew page to existing page of breeds
                 total = returned.total
+                isLoading = false
             }
             print("😎 Breeds returned! Total #: \(breeds.count)")
         } catch {
             print("😡SOMETHING WENT WRONG: Could not get data from urlString\n\(error.localizedDescription).")
+            isLoading = false
         }
     }
     
@@ -59,8 +64,13 @@ class CatViewModel {
             Task {
                 await getData()
             }
-//        } else {
-            
         }
+    }
+    
+    
+    func loadAll() async {
+        guard urlString != "" else { return } // Don't try to load if you have already loaded the last page of JSON
+        await getData() // get next page of data
+        await loadAll() // call loadAll again - recursion will stop when all pages are retrieved
     }
 }
