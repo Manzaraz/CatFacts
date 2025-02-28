@@ -6,17 +6,23 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6167B3292D714FB800B2D9A8 /* CatBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6167B3242D714FB800B2D9A8 /* CatBreed.swift */; };
+		6167B32A2D714FB800B2D9A8 /* CatFactsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6167B3252D714FB800B2D9A8 /* CatFactsApp.swift */; };
+		6167B32B2D714FB800B2D9A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6167B3262D714FB800B2D9A8 /* ContentView.swift */; };
+		6167B32C2D714FB800B2D9A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6167B3212D714FB800B2D9A8 /* Preview Assets.xcassets */; };
+		6167B32D2D714FB800B2D9A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6167B3232D714FB800B2D9A8 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		6167B30C2D714D1600B2D9A8 /* CatFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6167B3212D714FB800B2D9A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6167B3232D714FB800B2D9A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6167B3242D714FB800B2D9A8 /* CatBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreed.swift; sourceTree = "<group>"; };
+		6167B3252D714FB800B2D9A8 /* CatFactsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsApp.swift; sourceTree = "<group>"; };
+		6167B3262D714FB800B2D9A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6167B3272D714FB800B2D9A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		6167B30E2D714D1600B2D9A8 /* CatFacts */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CatFacts;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6167B3092D714D1600B2D9A8 /* Frameworks */ = {
@@ -32,7 +38,7 @@
 		6167B3032D714D1600B2D9A8 = {
 			isa = PBXGroup;
 			children = (
-				6167B30E2D714D1600B2D9A8 /* CatFacts */,
+				6167B3282D714FB800B2D9A8 /* CatFacts */,
 				6167B30D2D714D1600B2D9A8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +49,27 @@
 				6167B30C2D714D1600B2D9A8 /* CatFacts.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6167B3222D714FB800B2D9A8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6167B3212D714FB800B2D9A8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6167B3282D714FB800B2D9A8 /* CatFacts */ = {
+			isa = PBXGroup;
+			children = (
+				6167B3252D714FB800B2D9A8 /* CatFactsApp.swift */,
+				6167B3262D714FB800B2D9A8 /* ContentView.swift */,
+				6167B3242D714FB800B2D9A8 /* CatBreed.swift */,
+				6167B3232D714FB800B2D9A8 /* Assets.xcassets */,
+				6167B3272D714FB800B2D9A8 /* Info.plist */,
+				6167B3222D714FB800B2D9A8 /* Preview Content */,
+			);
+			path = CatFacts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +86,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				6167B30E2D714D1600B2D9A8 /* CatFacts */,
 			);
 			name = CatFacts;
 			packageProductDependencies = (
@@ -109,6 +133,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6167B32C2D714FB800B2D9A8 /* Preview Assets.xcassets in Resources */,
+				6167B32D2D714FB800B2D9A8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6167B3292D714FB800B2D9A8 /* CatBreed.swift in Sources */,
+				6167B32A2D714FB800B2D9A8 /* CatFactsApp.swift in Sources */,
+				6167B32B2D714FB800B2D9A8 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,9 +284,9 @@
 				DEVELOPMENT_TEAM = 4FXJ5W7FM5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CatFacts/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -284,9 +313,9 @@
 				DEVELOPMENT_TEAM = 4FXJ5W7FM5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CatFacts/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
