@@ -40,7 +40,7 @@ struct DetailView: View {
                     .foregroundStyle(.secondary)
             }
             
-            AsyncImage(url: URL(string: "https://upload.wikimedia.org/wikipedia/commons/9/9b/Gustav_chocolate.jpg")) { image in
+            AsyncImage(url: URL(string: ImageURL.breedImages[catBreed.breed] ?? "")) { image in
                 image
                     .resizable()
                     .scaledToFit()
