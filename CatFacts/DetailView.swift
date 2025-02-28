@@ -40,6 +40,21 @@ struct DetailView: View {
                     .foregroundStyle(.secondary)
             }
             
+            AsyncImage(url: URL(string: "https://upload.wikimedia.org/wikipedia/commons/9/9b/Gustav_chocolate.jpg")) { image in
+                image
+                    .resizable()
+                    .scaledToFit()
+            } placeholder: {
+                Image(systemName: "rectangle.slash")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundStyle(.secondary)
+                    .fontWeight(.thin)
+                    .frame(height: 200)
+                    .frame(maxWidth: .infinity)
+                Text("Image Not Available")
+            }
+
             
         }
         .listStyle(.plain)
