@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ListView: View {
-    
     @State private var catVM = CatViewModel()
+    
     var body: some View {
         NavigationStack {
             List(catVM.breeds) { catBreed in
@@ -23,6 +23,11 @@ struct ListView: View {
             }
             .listStyle(.plain)
             .navigationTitle("Cat Breeds:")
+            .toolbar {
+                ToolbarItem(placement: .status) {
+                    Text("\(catVM.breeds.count) of \(catVM.total) breeds.")
+                }
+            }
         }
         .task {
             await catVM.getData()
