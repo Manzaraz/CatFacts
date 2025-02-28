@@ -13,6 +13,7 @@
 		6167B32C2D714FB800B2D9A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6167B3212D714FB800B2D9A8 /* Preview Assets.xcassets */; };
 		6167B32D2D714FB800B2D9A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6167B3232D714FB800B2D9A8 /* Assets.xcassets */; };
 		6167B3302D71518200B2D9A8 /* CatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6167B32F2D71518200B2D9A8 /* CatViewModel.swift */; };
+		6167B3322D7157A700B2D9A8 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6167B3312D7157A700B2D9A8 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6167B3262D714FB800B2D9A8 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		6167B3272D714FB800B2D9A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6167B32F2D71518200B2D9A8 /* CatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewModel.swift; sourceTree = "<group>"; };
+		6167B3312D7157A700B2D9A8 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			children = (
 				6167B3252D714FB800B2D9A8 /* CatFactsApp.swift */,
 				6167B3262D714FB800B2D9A8 /* ListView.swift */,
+				6167B3312D7157A700B2D9A8 /* DetailView.swift */,
 				6167B3242D714FB800B2D9A8 /* CatBreed.swift */,
 				6167B32F2D71518200B2D9A8 /* CatViewModel.swift */,
 				6167B3232D714FB800B2D9A8 /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 				6167B3292D714FB800B2D9A8 /* CatBreed.swift in Sources */,
 				6167B3302D71518200B2D9A8 /* CatViewModel.swift in Sources */,
 				6167B32A2D714FB800B2D9A8 /* CatFactsApp.swift in Sources */,
+				6167B3322D7157A700B2D9A8 /* DetailView.swift in Sources */,
 				6167B32B2D714FB800B2D9A8 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

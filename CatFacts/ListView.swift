@@ -12,12 +12,17 @@ struct ListView: View {
     @State private var catVM = CatViewModel()
     var body: some View {
         NavigationStack {
-            List(catVM.breeds) { breed in
-                Text(breed.breed)
-                    .font(.title2)
+            List(catVM.breeds) { catBreed in
+                NavigationLink {
+                    DetailView(catBreed: catBreed)
+                } label: {
+                    Text(catBreed.breed)
+                        .font(.title2)
+                }
+
             }
             .listStyle(.plain)
-            .navigationTitle("Cat Breeds")
+            .navigationTitle("Cat Breeds:")
         }
         .task {
             await catVM.getData()
